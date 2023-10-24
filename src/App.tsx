@@ -1,20 +1,26 @@
+import { makeStyles, useTheme } from "@rneui/themed";
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 export const PlaneTracker = () => {
+  const styles = useStyles();
+  const { theme } = useTheme();
+
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text style={{ color: theme.colors.primary }}>
+        Open up App.tsx to start working on your app!
+      </Text>
       <StatusBar style="auto" />
     </View>
   );
 };
 
-const styles = StyleSheet.create({
+const useStyles = makeStyles(() => ({
   container: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
     justifyContent: "center",
   },
-});
+}));
