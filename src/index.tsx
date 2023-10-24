@@ -1,5 +1,10 @@
 import { PlaneTracker } from "./App";
+import { ReThemeProvider } from "./theme";
 
 export const Entry = () => {
-  return <PlaneTracker />;
+  return (
+    <ReThemeProvider>
+      <PlaneTracker />
+    </ReThemeProvider>
+  );
 };
