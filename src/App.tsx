@@ -2,8 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 
 import { AuthenticationNavigator } from "@authentication";
-
-import { AppRoutes } from "./routes";
+import { AppRoutes } from "@routes";
 
 const AppStack = createStackNavigator<AppRoutes>();
 

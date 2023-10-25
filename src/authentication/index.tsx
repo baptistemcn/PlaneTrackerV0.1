@@ -1,5 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import { AuthRoutes } from "../routes";
+
+import { AuthRoutes } from "@routes";
+
 import { OnBoarding } from "./OnBoarding";
 
 const AuthenticationStack = createStackNavigator<AuthRoutes>();

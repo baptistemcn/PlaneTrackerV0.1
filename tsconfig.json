@@ -6,6 +6,7 @@
     "baseUrl": ".",
     "paths": {
       "@authentication": ["src/authentication"],
+      "@routes": ["src/routes"],
       "@theme": ["src/theme"]
     }
   }
