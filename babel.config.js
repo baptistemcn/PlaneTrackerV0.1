@@ -8,6 +8,7 @@ module.exports = function (api) {
         "module-resolver",
         {
           alias: {
+            "@authentication": "./src/authentication",
             "@theme": "./src/theme",
           },
           extensions: [".ts", ".tsx"],
