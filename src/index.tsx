@@ -1,7 +1,7 @@
 import { useFonts } from "expo-font";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { ReThemeProvider } from "./theme";
+import { ReThemeProvider } from "@theme";
 
 import { PlaneTracker } from "./App";
 

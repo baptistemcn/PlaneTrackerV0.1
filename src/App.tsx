@@ -1,6 +1,7 @@
-import { makeStyles, useTheme } from "@rneui/themed";
 import { StatusBar } from "expo-status-bar";
 import { Text, View } from "react-native";
+
+import { makeStyles, useTheme } from "@rneui/themed";
 
 export const PlaneTracker = () => {
   const styles = useStyles();
