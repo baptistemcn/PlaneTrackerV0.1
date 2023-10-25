@@ -1,27 +1,30 @@
-import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
 
-import { makeStyles, useTheme } from "@rneui/themed";
+import { AuthenticationNavigator } from "./authentication";
+
+import { AppRoutes } from "./routes";
+
+const AppStack = createStackNavigator<AppRoutes>();
 
 export const PlaneTracker = () => {
-  const styles = useStyles();
-  const { theme } = useTheme();
-
   return (
-    <View style={styles.container}>
-      <Text style={{ color: theme.colors.primary }}>
-        Open up App.tsx to start working on your app!
-      </Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <AppStack.Navigator
+        screenOptions={{
+          headerTitle: undefined,
+          headerShadowVisible: false,
+        }}
+      >
+        <AppStack.Screen
+          name="Authentication"
+          component={AuthenticationNavigator}
+          options={{
+            title: "",
+            headerShown: false,
+          }}
+        />
+      </AppStack.Navigator>
+    </NavigationContainer>
   );
 };
-
-const useStyles = makeStyles(() => ({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-}));
