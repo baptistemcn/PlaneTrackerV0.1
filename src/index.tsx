@@ -1,6 +1,8 @@
 import { useFonts } from "expo-font";
+import { I18nextProvider } from "react-i18next";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import i18n from "@i18n";
 import { ReThemeProvider } from "@theme";
 
 import { PlaneTracker } from "./App";
@@ -19,7 +21,9 @@ export const Entry = () => {
   return (
     <SafeAreaProvider>
       <ReThemeProvider>
-        <PlaneTracker />
+        <I18nextProvider i18n={i18n}>
+          <PlaneTracker />
+        </I18nextProvider>
       </ReThemeProvider>
     </SafeAreaProvider>
   );

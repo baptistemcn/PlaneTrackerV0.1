@@ -9,6 +9,7 @@ module.exports = function (api) {
         {
           alias: {
             "@authentication": "./src/authentication",
+            "@i18n": "./src/i18n",
             "@routes": "./src/routes",
             "@theme": "./src/theme",
           },
