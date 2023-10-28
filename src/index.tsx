@@ -1,11 +1,14 @@
-import { useFonts } from "expo-font";
+import React, { Suspense } from "react";
 import { I18nextProvider } from "react-i18next";
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import { useFonts } from "expo-font";
 
 import i18n from "@i18n";
 import { ReThemeProvider } from "@theme";
 
-import { PlaneTracker } from "./App";
+const PlaneTracker = React.lazy(() =>
+  import("./App").then((module) => ({ default: module.PlaneTracker })),
+);
 
 export const Entry = () => {
   const [fontsLoaded] = useFonts({
@@ -22,7 +25,9 @@ export const Entry = () => {
     <SafeAreaProvider>
       <ReThemeProvider>
         <I18nextProvider i18n={i18n}>
-          <PlaneTracker />
+          <Suspense>
+            <PlaneTracker />
+          </Suspense>
         </I18nextProvider>
       </ReThemeProvider>
     </SafeAreaProvider>
