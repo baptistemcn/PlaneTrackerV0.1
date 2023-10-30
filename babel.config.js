@@ -13,6 +13,7 @@ module.exports = function (api) {
             "@i18n": "./src/i18n",
             "@routes": "./src/routes",
             "@theme": "./src/theme",
+            "@ui": "./src/ui",
           },
           extensions: [".ts", ".tsx"],
         },
