@@ -11,6 +11,7 @@
       "@i18n": ["src/i18n"],
       "@routes": ["src/routes"],
       "@theme": ["src/theme"],
+      "@types": ["src/types"],
       "@ui": ["src/ui"]
     }
   }

@@ -1,10 +1,6 @@
-import { ReactNode } from "react";
-import { StyleProp, Text, TextStyle } from "react-native";
+import { Text } from "react-native";
 
-interface TextProps {
-  children: ReactNode;
-  variants?: StyleProp<TextStyle>;
-}
+import { TextProps } from "@types";
 
 export const ReText = ({
   children,
