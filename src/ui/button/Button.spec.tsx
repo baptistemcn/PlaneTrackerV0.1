@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react-native";
 import { ReButton } from "./Button";
 import { ReThemeProvider } from "@theme";
+import { ReText } from "@components";
 
 const mockStyles = {
   button: {
@@ -39,7 +40,7 @@ describe("ReButton component", () => {
       width: 245,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#000000",
+      backgroundColor: "#FFFFFF",
     });
   });
 
@@ -62,7 +63,9 @@ describe("ReButton component", () => {
   it("should render a label in button with default style", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <ReButton />
+        <ReButton>
+          <ReText>Clicked</ReText>
+        </ReButton>
       </ReThemeProvider>,
     );
 
@@ -72,14 +75,17 @@ describe("ReButton component", () => {
     expect(textElement).toBeOnTheScreen();
 
     expect(textElement.props.style).toEqual({
-      color: "#FFFFFF",
+      color: "#000000",
+      fontSize: 16,
     });
   });
 
   it("should render a children in button with default props", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <ReButton />
+        <ReButton>
+          <ReText>PlaneTracker</ReText>
+        </ReButton>
       </ReThemeProvider>,
     );
 
@@ -88,13 +94,16 @@ describe("ReButton component", () => {
     expect(textElement).toBeTruthy();
     expect(textElement).toBeOnTheScreen();
 
-    expect(textElement.props.children).toBe("Label");
+    expect(textElement.props.children).toBe("PlaneTracker");
+    expect(textElement.props.style).toEqual({ color: "#000000", fontSize: 16 });
   });
 
   it("should render a label in button with defined props", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <ReButton>PlaneTracker</ReButton>
+        <ReButton>
+          <ReText variants={mockStyles.text}>PlaneTracker</ReText>
+        </ReButton>
       </ReThemeProvider>,
     );
 
@@ -104,5 +113,6 @@ describe("ReButton component", () => {
     expect(textElement).toBeOnTheScreen();
 
     expect(textElement.props.children).toEqual("PlaneTracker");
+    expect(textElement.props.style).toEqual({ color: "#FF0000" });
   });
 });
