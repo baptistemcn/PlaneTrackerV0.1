@@ -1,18 +1,7 @@
-import { DUMMYIMG } from "@assets";
-import {
-  Image,
-  ImageResizeMode,
-  ImageSourcePropType,
-  ImageStyle,
-  StyleProp,
-} from "react-native";
+import { Image } from "react-native";
 
-interface ReImageProps {
-  resizeMode?: ImageResizeMode | undefined;
-  source?: ImageSourcePropType;
-  styles?: StyleProp<ImageStyle>;
-  testID?: string;
-}
+import { DUMMYIMG } from "@assets";
+import { ReImageProps } from "@types";
 
 export const ReImage = ({
   resizeMode,
