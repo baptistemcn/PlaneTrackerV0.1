@@ -1,5 +1,8 @@
 {
   "translation": {
-    "title": "PlaneTracker fr"
+    "title": "PlaneTracker fr",
+    "onboarding": {
+      "language": "Choisir une langue"
+    }
   }
 }
