@@ -11,18 +11,20 @@ interface ReImageProps {
   resizeMode?: ImageResizeMode | undefined;
   source?: ImageSourcePropType;
   styles?: StyleProp<ImageStyle>;
+  testID?: string;
 }
 
 export const ReImage = ({
   resizeMode,
   source = DUMMYIMG,
   styles = { height: 64, width: 64 },
+  testID = "image",
 }: ReImageProps) => {
   return (
     <Image
       source={source}
       style={styles}
-      testID="image"
+      testID={testID}
       resizeMode={resizeMode}
     />
   );
