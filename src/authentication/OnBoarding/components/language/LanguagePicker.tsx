@@ -28,6 +28,9 @@ export const LanguagePicker = () => {
       <ReText variants={styles.title} testID="language">
         {t("onboarding.language")}
       </ReText>
+      <ReText variants={styles.subtitle} testID="subtitle">
+        {t("onboarding.subtitle")}
+      </ReText>
       <View style={styles.grid}>
         <ReButton
           variants={[
@@ -68,6 +71,12 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontSize: 20,
     margin: theme.spacing.xl,
+  },
+  subtitle: {
+    textAlign: "center",
+    margin: theme.spacing.md,
+    fontStyle: "italic",
+    color: theme.colors.grey5,
   },
   grid: {
     flex: 1,

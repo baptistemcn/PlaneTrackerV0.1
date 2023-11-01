@@ -2,7 +2,8 @@
   "translation": {
     "title": "PlaneTracker fr",
     "onboarding": {
-      "language": "Choisir une langue"
+      "language": "Choisir une langue",
+      "subtitle": "Vous pourrez la changer plus tard"
     }
   }
 }

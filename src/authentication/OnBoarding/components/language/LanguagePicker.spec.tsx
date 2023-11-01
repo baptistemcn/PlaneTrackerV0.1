@@ -36,6 +36,21 @@ describe("Language Picker component", () => {
     expect(titleElement.props.children).toEqual("onboarding.language");
   });
 
+  it("should render a subtitle", () => {
+    const { getByTestId } = render(
+      <ReThemeProvider>
+        <LanguagePicker />
+      </ReThemeProvider>,
+    );
+
+    const subtitleElement = getByTestId("subtitle");
+
+    expect(subtitleElement).toBeTruthy();
+    expect(subtitleElement).toBeOnTheScreen();
+
+    expect(subtitleElement.props.children).toEqual("onboarding.subtitle");
+  });
+
   it("should render two button with two flags", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
