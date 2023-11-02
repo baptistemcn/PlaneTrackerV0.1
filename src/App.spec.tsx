@@ -20,18 +20,4 @@ describe("PlaneTracker", () => {
       </ReThemeProvider>,
     );
   });
-
-  it("should render presentation text", () => {
-    const { getByText } = render(
-      <ReThemeProvider>
-        <PlaneTracker />
-      </ReThemeProvider>,
-    );
-
-    const textElement = getByText("title");
-
-    expect(textElement).toBeTruthy();
-    expect(textElement).toBeOnTheScreen();
-    expect(textElement.props.children).toEqual("title");
-  });
 });

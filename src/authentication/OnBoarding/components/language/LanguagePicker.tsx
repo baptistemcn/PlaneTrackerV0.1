@@ -28,9 +28,6 @@ export const LanguagePicker = () => {
       <ReText variants={styles.title} testID="language">
         {t("onboarding.language")}
       </ReText>
-      <ReText variants={styles.subtitle} testID="subtitle">
-        {t("onboarding.subtitle")}
-      </ReText>
       <View style={styles.grid}>
         <ReButton
           variants={[
@@ -57,6 +54,9 @@ export const LanguagePicker = () => {
           <ReImage source={US_FLAG} testID="usflag" />
         </ReButton>
       </View>
+      <ReText variants={styles.subtitle} testID="subtitle">
+        {t("onboarding.subtitle")}
+      </ReText>
     </View>
   );
 };
@@ -74,7 +74,6 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     textAlign: "center",
-    margin: theme.spacing.md,
     fontStyle: "italic",
     color: theme.colors.grey5,
   },
@@ -82,5 +81,6 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-evenly",
+    maxHeight: "40%",
   },
 }));
