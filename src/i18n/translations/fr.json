@@ -1,9 +1,13 @@
 {
   "translation": {
-    "title": "PlaneTracker fr",
+    "common": {
+      "continue": "Continuer"
+    },
+    "title": "Bienvenue sur PlaneTracker !",
     "onboarding": {
       "language": "Choisir une langue",
-      "subtitle": "Vous pourrez la changer plus tard"
+      "subtitle": "Vous pourrez la changer plus tard",
+      "presentation": "Bienvenue sur PlaneTracker. Choisissez votre langue et partez à la découverte des cieux."
     }
   }
 }

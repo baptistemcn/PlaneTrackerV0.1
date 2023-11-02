@@ -12,3 +12,17 @@ export const languagePicker = makeStyles((theme) => ({
     borderColor: theme.colors.greyOutline,
   },
 }));
+
+export const primaryButton = makeStyles((theme) => ({
+  button: {
+    borderRadius: 25,
+    height: 50,
+    width: 245,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: theme.colors.primary,
+  },
+  text: {
+    color: theme.colors.background,
+  },
+}));
